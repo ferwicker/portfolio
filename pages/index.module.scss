@@ -26,6 +26,11 @@
 .theBest {
   font-style: italic;
   white-space: nowrap;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: rgba(236, 218, 20, 0.8);
+  }
 }
 
 .wavyLink{

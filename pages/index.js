@@ -42,7 +42,8 @@ const Home = () => {
               I love learning new things and always have a book or two with me.
             </p> 
             <p>
-              I have a dog called Fish and he is, well... ✨<em>the best.</em>✨
+              I have a dog called Fish and he is, well... 
+              <span className={css.theBest}>✨the best.✨</span>
             </p>
           </div>   
         </section>

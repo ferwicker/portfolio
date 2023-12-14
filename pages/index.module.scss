@@ -39,7 +39,11 @@
 .contactButton {
   position: absolute;
   bottom: 10vh;
-  bottom: 10svh;
+
+  @media (max-width: 768px) {
+    bottom: 20vh;
+    bottom: 20lvh;
+  }
 }
 
 .contactInfo {

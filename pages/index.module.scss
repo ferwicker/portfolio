@@ -6,3 +6,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.contactButton {
+  position: absolute;
+  bottom: 10vh;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 56px;
+}

@@ -22,7 +22,7 @@ body {
 section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 2rem;
   display: flex;
   flex: 1;
@@ -96,11 +96,21 @@ button {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@-moz-document url-prefix() {
+  main {
+    min-height: 100vh;
+  }
+
+  section {
+    min-height: 100vh;
+  }
 }

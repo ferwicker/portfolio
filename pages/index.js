@@ -1,11 +1,14 @@
 
 import Obfuscate from 'react-obfuscate';
 import { Link, Element } from 'react-scroll';
+
 import css from './index.module.scss';
+import Nav from '../components/Nav/Nav';
 
 const Home = () => {
   return (
     <>
+      <Nav />
       <section>
         <div className={css.hero}>
           <h1>Fernanda</h1>

@@ -12,11 +12,20 @@ const Main = ({children}) => {
     mainRef.current.style.setProperty('--y', `${clientY}px`);
   };
 
+  const getTouchPosition = (event) => {
+    if (!mainRef.current) return;
+    const { clientX, clientY } = event.touches[0];
+    mainRef.current.style.setProperty('--x', `${clientX}px`);
+    mainRef.current.style.setProperty('--y', `${clientY}px`);
+  };
+
   React.useEffect(() => {
     window.addEventListener('mousemove', getMousePosition);
+    window.addEventListener('touchmove', getTouchPosition);
 
     return () => {
       window.removeEventListener('mousemove', getMousePosition);
+      window.removeEventListener('touchmove', getTouchPosition);
     }
   },[]);
 

@@ -23,7 +23,7 @@ section {
   position: relative;
   width: 100%;
   min-height: 100vh; // for older browsers
-  min-height: 100svh;
+  min-height: 100lvh;
   padding: 2rem;
   display: flex;
   flex: 1;
@@ -50,33 +50,39 @@ img {
   height: auto;
 }
 
-h1 {
+h1, h2, h3 {
   cursor: default;
   font-family: $font-primary;
   font-weight: 300;
-  font-size: clamp(50px, 8vw + 1rem, 140px);
   line-height: 1;
-  color: rgba(255, 255, 255, 0.75);
   margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+h1 {
+  font-size: clamp(50px, 8vw + 1rem, 140px);
 }
 
 h2 {
-  cursor: default;
-  font-family: $font-primary;
-  font-weight: 300;
   font-size: clamp(42px, 7vw + 1rem, 120px);
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: clamp(36px, 5vw + 1rem, 72px);
 }
 
 p {
   cursor: default;
+  max-width: 60vw;
   text-align: center;
   font-family: $font-secondary;
   font-size: clamp(20px, 1vw + 1rem, 36px);
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
+
+  @media (max-width: 700px) {
+    max-width: 80vw;
+  }
 }
 
 button {
@@ -98,7 +104,7 @@ button {
 
 main {
   min-height: 100vh; // for older browsers
-  min-height: 100svh;
+  min-height: 100lvh;
   padding: 0;
   flex: 1;
   display: flex;

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 import Logo from '../Logo/Logo';
 
@@ -11,7 +11,7 @@ const Nav = () => {
   const navRef = React.createRef(null);
 
   const getScrollPosition = () => {
-    if (window.scrollY > window.innerHeight * 0.8) {
+    if (window.scrollY > window.innerHeight * 0.7) {
       setShowNav(true);
     } else {
       setShowNav(false);
@@ -41,15 +41,15 @@ const Nav = () => {
     <div ref={navRef} className={[css.navContainer].join(' ')}>
       <Logo />
       <div className={css.navLinksContainer}>
-        {/* <Link className={css.navLink} to="contact" smooth={true}>
+        <Link className={css.navLink} to="about" smooth={true}>
           <button className={css.navButton}>About</button>
         </Link>
-        <Link className={css.navLink} to="contact" smooth={true}>
-          <button className={css.navButton}>Work</button>
+        <Link className={css.navLink} to="work" smooth={true}>
+          <button className={css.navButton}>Experience</button>
         </Link>
         <Link className={css.navLink} to="contact" smooth={true}>
           <button className={css.navButton}>Contact</button>
-        </Link> */}
+        </Link>
       </div>
     </div>
   )

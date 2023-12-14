@@ -12,7 +12,6 @@
   z-index: -2;
 
   &.show {
-    // display: flex;
     opacity: 1;
     transform: translateY(0);
     z-index: 0;
@@ -24,19 +23,21 @@
     align-items: flex-end;
 
     .navLink {
-      padding: 12px 24px;
-      font-size: 20px;
-
       &:first-child {
-        padding-top: 24px;
+        padding-top: 12px;
       }
 
-      &:hover {
-        color: white;
-      }
-
-      &:active {
-        color: rgba(255, 255, 255, 0.4);
+      .navButton {
+        padding: 12px 24px;
+        font-size: 20px;
+  
+        &:hover {
+          color: white;
+        }
+  
+        &:active {
+          color: rgba(255, 255, 255, 0.4);
+        }
       }
     }
   }

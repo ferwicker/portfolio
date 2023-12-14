@@ -1,5 +1,8 @@
 import React from 'react';
+// import { Link } from 'react-scroll';
+
 import Logo from '../Logo/Logo';
+
 import css from './Nav.module.scss';
 
 const Nav = () => {
@@ -38,9 +41,15 @@ const Nav = () => {
     <div ref={navRef} className={[css.navContainer].join(' ')}>
       <Logo />
       <div className={css.navLinksContainer}>
-        {/* <button className={css.navLink}>About</button>
-        <button className={css.navLink}>Work</button>
-        <button className={css.navLink}>Contact</button> */}
+        {/* <Link className={css.navLink} to="contact" smooth={true}>
+          <button className={css.navButton}>About</button>
+        </Link>
+        <Link className={css.navLink} to="contact" smooth={true}>
+          <button className={css.navButton}>Work</button>
+        </Link>
+        <Link className={css.navLink} to="contact" smooth={true}>
+          <button className={css.navButton}>Contact</button>
+        </Link> */}
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import css from './Main.module.scss';
 
 const Main = ({children}) => {
   const mainRef = React.useRef(null);
+  const theme = 'dark';
 
   const getMousePosition = (event) => {
     if (!mainRef.current) return;
@@ -30,8 +31,8 @@ const Main = ({children}) => {
   },[]);
 
   return (
-    <main ref={mainRef} >
-      <div className={css.background} />
+    <main className={css[theme]} ref={mainRef} >
+      <div className={[css.background, css[theme]].join(' ')} />
       {children}
     </main>
   )

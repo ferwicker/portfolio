@@ -19,7 +19,7 @@
     letter-spacing: 1px;
     line-height: .9;
     font-size: clamp(22px, 1vw + 2rem, 38px);
-    color: rgba(255, 255, 255, 0.8);
+    opacity: .8;
   }
 }
 
@@ -29,19 +29,18 @@
   transition: all 0.5s ease;
 
   &:hover {
-    color: rgba(236, 218, 20, 0.8);
+    color: rgb(236, 207, 20);
   }
 }
 
 .wavyLink{
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   white-space: nowrap;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.9);
+    opacity: .9;
     font-style: italic;
   }
 }
@@ -66,12 +65,11 @@
 .bodyText {
   p {
     margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.8);
+    opacity: .8;
     font-size: clamp(20px, .5vw + 1rem, 36px);
   }
 
   a {
-    color: rgba(255, 255, 255, 0.8);
     font-size: clamp(20px, .5vw + 1rem, 36px);
   }
 }

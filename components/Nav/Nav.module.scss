@@ -32,11 +32,11 @@
         font-size: 20px;
   
         &:hover {
-          color: white;
+          opacity: 1;
         }
   
         &:active {
-          color: rgba(255, 255, 255, 0.4);
+          opacity: .4;
         }
       }
     }
@@ -47,6 +47,14 @@
     align-items: center;
     padding-bottom: 32px;
     background: linear-gradient(0deg, rgba(10,99,154,0) 0%, rgba(21,2,28,1) 80%);
+
+    &.dark {
+      background: linear-gradient(0deg, rgba(10,99,154,0) 0%, rgba(21,2,28,1) 80%);
+    }
+
+    &.light {
+      background: linear-gradient(0deg, #f5aab700 0%, #DCCDED 80%);
+    }
 
     .navLinksContainer {
       flex-direction: row;

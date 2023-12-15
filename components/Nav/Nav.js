@@ -7,7 +7,7 @@ import css from './Nav.module.scss';
 
 const Nav = () => {
   const [showNav, setShowNav] = React.useState(false);
-
+  const theme = 'dark';
   const navRef = React.createRef(null);
 
   const getScrollPosition = () => {
@@ -38,7 +38,7 @@ const Nav = () => {
   }, [showNav]);
 
   return (
-    <div ref={navRef} className={[css.navContainer].join(' ')}>
+    <div ref={navRef} className={[css.navContainer, css[theme]].join(' ')}>
       <Logo />
       <div className={css.navLinksContainer}>
         <Link className={css.navLink} to="about" smooth={true}>

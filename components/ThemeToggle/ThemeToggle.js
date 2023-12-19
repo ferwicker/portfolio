@@ -1,6 +1,6 @@
 import React from "react";
 
-import SVGIcon from "../SvgIcon/SvgIcon";
+import SVGIcon from '../SVGIcon/SVGIcon'
 import { useTheme, useThemeUpdate } from "../../context/ThemeContext";
 
 import css from './ThemeToggle.module.scss';

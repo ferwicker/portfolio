@@ -1,0 +1,25 @@
+.svg {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+
+  > * {
+    transition: all 0.3s ease;
+  }
+}
+
+.dark {
+  .svg {
+    > * {
+      fill: white;
+    }
+  }
+}
+
+.light {
+  .svg {
+    > * {
+      fill: #1C0213;
+    }
+  }
+}

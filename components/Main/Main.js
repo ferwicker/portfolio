@@ -1,10 +1,11 @@
 import React from "react";
-
+import { useTheme } from "../../context/ThemeContext";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import css from './Main.module.scss';
 
 const Main = ({children}) => {
   const mainRef = React.useRef(null);
-  const theme = 'dark';
+  const theme = useTheme() ? 'dark' : 'light';
 
   const getMousePosition = (event) => {
     if (!mainRef.current) return;
@@ -34,6 +35,7 @@ const Main = ({children}) => {
     <main className={css[theme]} ref={mainRef} >
       <div className={[css.background, css[theme]].join(' ')} />
       {children}
+      <ThemeToggle />
     </main>
   )
 }

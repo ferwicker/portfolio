@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import { useTheme } from '../../context/ThemeContext';
 
 import Logo from '../Logo/Logo';
 
@@ -7,7 +8,7 @@ import css from './Nav.module.scss';
 
 const Nav = () => {
   const [showNav, setShowNav] = React.useState(false);
-  const theme = 'dark';
+  const theme = useTheme() ? 'dark' : 'light';
   const navRef = React.createRef(null);
 
   const getScrollPosition = () => {

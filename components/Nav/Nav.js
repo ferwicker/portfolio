@@ -10,7 +10,7 @@ const Nav = () => {
   const [showNav, setShowNav] = React.useState(false);
   const theme = useTheme() ? 'dark' : 'light';
   const navRef = React.createRef(null);
-
+  // FIX nav disappears after changing theme
   const getScrollPosition = () => {
     if (window.scrollY > window.innerHeight * 0.7) {
       setShowNav(true);
@@ -27,19 +27,8 @@ const Nav = () => {
     }
   },[]);
 
-  React.useEffect(() => {
-    if (!navRef.current) return;
-
-    if (showNav) {
-      navRef.current.classList.add(css.show)
-    } else {
-      navRef.current.classList.remove(css.show)
-    }
-    
-  }, [showNav]);
-
   return (
-    <div ref={navRef} className={[css.navContainer, css[theme]].join(' ')}>
+    <div ref={navRef} className={[css.navContainer, css[theme], showNav ? css.show : ''].join(' ')}>
       <Logo />
       <div className={css.navLinksContainer}>
         <Link className={css.navLink} to="about" smooth={true}>

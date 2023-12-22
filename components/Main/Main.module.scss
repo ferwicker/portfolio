@@ -19,7 +19,7 @@
 }
 
 .light {
-  color: #1C0213;
+  color: $colour-dark;
 
   &.background {
     background: 
@@ -31,7 +31,7 @@
   }
 
   a, button {
-    color: #1C0213;
+    color: $colour-dark;
   }
 }
 

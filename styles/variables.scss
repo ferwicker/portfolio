@@ -1,2 +1,13 @@
+// colours
+$colour-dark: #1C0213;
+
+// fonts
 $font-primary: "gravesend-sans", sans-serif;
 $font-secondary: "pt-mono", monospace;
+
+// animations
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px);}
+  to { transform: translateY(0);}
+}

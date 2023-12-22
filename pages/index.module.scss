@@ -8,6 +8,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: fade-in linear forwards;
+      animation-duration: 0.5s;
+    }
   }
 }
 
@@ -26,7 +31,7 @@
 .theBest {
   font-style: italic;
   white-space: nowrap;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 
   &:hover {
     color: rgb(236, 207, 20);
@@ -35,12 +40,12 @@
 
 .wavyLink{
   text-decoration: underline;
-  text-decoration-style: dotted;
-  transition: all 0.3s ease;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
   white-space: nowrap;
 
   &:hover {
-    opacity: .9;
     font-style: italic;
   }
 }
@@ -70,6 +75,47 @@
   }
 
   a {
+    opacity: 1;
     font-size: clamp(20px, .5vw + 1rem, 36px);
+  }
+}
+
+.skillsHeading {
+  margin: 16px;
+}
+
+.skillsContainer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 16px;
+
+  .skillTag {
+    cursor: default;
+    min-width: 120px;
+    padding: 12px 16px;
+    border: solid 2px;
+    border-radius: 18px;
+    font-family: $font-primary;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: .8;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &.dark {
+      border-color: white;
+    }
+
+    &.light {
+      border-color: $colour-dark
+    }
   }
 }

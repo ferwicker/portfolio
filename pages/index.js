@@ -4,8 +4,10 @@ import { Link, Element } from 'react-scroll';
 
 import css from './index.module.scss';
 import Nav from '../components/Nav/Nav';
+import { useTheme } from '../context/ThemeContext';
 
 const Home = () => {
+  const darkTheme = useTheme();
   return (
     <>
       <Nav />
@@ -70,9 +72,15 @@ const Home = () => {
               I work well as part of a team, but can also self manage.
             </p> */}
           </div>
-          {/* <h3>
-            Skills
-          </h3> */}
+          <h3 className={css.skillsHeading}>Skills</h3>
+          <div className={[css.skillsContainer, darkTheme ? css.dark : css.light].join(' ')}>
+            <span className={css.skillTag}>HTML</span>
+            <span className={css.skillTag}>CSS</span>
+            <span className={css.skillTag}>JS</span>
+            <span className={css.skillTag}>React</span>
+            <span className={css.skillTag}>Next JS</span>
+            <span className={css.skillTag}>Typescript</span>
+          </div>
         </section>
       </Element>
       <Element name='contact'>

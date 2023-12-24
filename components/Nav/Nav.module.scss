@@ -5,8 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  transition: all 0.5s;
-  transition-delay: 0.3s;
+  transition-property: opacity, background;
+  transition-delay: 0.3s, 0;
+  transition-duration: 0.5s, 0.4s;
+  transition-timing-function: ease;
   opacity: 0;
   transform: translateY(8px);
   z-index: -2;

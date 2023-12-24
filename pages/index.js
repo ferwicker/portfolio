@@ -38,8 +38,8 @@ const Home = () => {
           <div className={[css.bodyText, css.fadeIn_view].join(' ')}>
             <p>
               Hi! My name is Fernanda, but my friends call me Fer. 
-              I am a Front End Developer from Sydney, Australia. I have several years'
-              experience in Graphic Design, which gives me pixel perfect attention to detail!
+              I am a Front End Developer from Sydney, Australia. I have a professional background
+               in Graphic Design, which gives me pixel perfect attention to detail!
             </p>
             <p>
               My many hobbies include yoga, crochet, reading, chess, and creative coding.
@@ -72,8 +72,9 @@ const Home = () => {
               {' '}
               at the State Library of New South Wales.
             </p>
+            {/* Add some about personal projects with new skills when they start being included. */}
             {/* <p>
-              I work well as part of a team, but can also self manage.
+              I love learning new skills, 
             </p> */}
           </div>
           <div className={css.fadeIn_view}>

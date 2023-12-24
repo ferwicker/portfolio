@@ -10,7 +10,7 @@ const Nav = () => {
   const [showNav, setShowNav] = React.useState(false);
   const theme = useTheme() ? 'dark' : 'light';
   const navRef = React.createRef(null);
-  // FIX nav disappears after changing theme
+
   const getScrollPosition = () => {
     if (window.scrollY > window.innerHeight * 0.7) {
       setShowNav(true);

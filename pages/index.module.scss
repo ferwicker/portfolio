@@ -150,7 +150,7 @@
   
   @media (prefers-reduced-motion: no-preference) {
     animation: fade-in linear forwards;
-    animation-timeline: view(75% calc(var(--index) * 3vh));
+    animation-timeline: view(80% calc(var(--index) * 3vh));
 
     @media (max-width: 768px) {
       animation-timeline: view(90% 5%);

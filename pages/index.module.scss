@@ -8,10 +8,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 
     @media (prefers-reduced-motion: no-preference) {
       animation: fade-in linear forwards;
-      animation-duration: 0.5s;
+      animation-duration: 1s;
+      animation-delay: .5s;
     }
   }
 }
@@ -53,10 +55,17 @@
 .contactButton {
   position: absolute;
   bottom: 10vh;
+  opacity: 0;
 
   @media (max-width: 768px) {
     bottom: 20vh;
     bottom: 20lvh;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fade-in linear forwards;
+    animation-duration: 1s;
+    animation-delay: 1s;
   }
 }
 
@@ -92,7 +101,13 @@
   width: 100%;
   padding: 16px;
 
+  @media (max-width: 768px) {
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
   .skillTag {
+    display: block;
     cursor: default;
     min-width: 120px;
     padding: 12px 16px;
@@ -103,11 +118,12 @@
     text-align: center;
     text-transform: uppercase;
     opacity: .8;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       opacity: 1;
       background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px) scale(1.01);
     }
 
     &.dark {
@@ -116,6 +132,28 @@
 
     &.light {
       border-color: $colour-dark
+    }
+  }
+}
+
+.fadeIn_view {
+  opacity: 0;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fade-in linear forwards;
+    animation-timeline: view(80% 5%);
+  }
+}
+
+.fadeIn_skill {
+  opacity: 0;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fade-in linear forwards;
+    animation-timeline: view(75% calc(var(--index) * 3vh));
+
+    @media (max-width: 768px) {
+      animation-timeline: view(90% 5%);
     }
   }
 }

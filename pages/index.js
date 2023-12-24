@@ -32,8 +32,10 @@ const Home = () => {
       </section>
       <Element name='about'>
         <section>
-          <h2>About me</h2>
-          <div className={css.bodyText}>
+          <div className={css.fadeIn_view}>
+            <h2>About me</h2>
+          </div>
+          <div className={[css.bodyText, css.fadeIn_view].join(' ')}>
             <p>
               Hi! My name is Fernanda, but my friends call me Fer. 
               I am a Front End Developer from Sydney, Australia. I have several years'
@@ -52,8 +54,10 @@ const Home = () => {
       </Element>
       <Element name='work'>
         <section>
-          <h2>Experience</h2>
-          <div className={css.bodyText}>
+          <div className={css.fadeIn_view}>
+            <h2>Experience</h2>
+          </div>
+          <div className={[css.bodyText, css.fadeIn_view].join(' ')}>
             <p>
               I have 2+ years' professional experience working in React, as part of the team of developers
               working mainly on the 
@@ -72,21 +76,39 @@ const Home = () => {
               I work well as part of a team, but can also self manage.
             </p> */}
           </div>
-          <h3 className={css.skillsHeading}>Skills</h3>
-          <div className={[css.skillsContainer, darkTheme ? css.dark : css.light].join(' ')}>
-            <span className={css.skillTag}>HTML</span>
-            <span className={css.skillTag}>CSS</span>
-            <span className={css.skillTag}>JS</span>
-            <span className={css.skillTag}>React</span>
-            <span className={css.skillTag}>Next JS</span>
-            <span className={css.skillTag}>Typescript</span>
+          <div className={css.fadeIn_view}>
+            <h3 className={css.skillsHeading}>Skills</h3>
+          </div>
+          <div 
+            className={[css.skillsContainer, darkTheme ? css.dark : css.light].join(' ')}
+          >
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>HTML</span>
+            </div>
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>CSS</span>
+            </div>
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>JS</span>
+            </div>
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>React</span>
+            </div>
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>Next JS</span>
+            </div>
+            <div className={css.fadeIn_skill}>
+              <span className={css.skillTag}>Typescript</span>
+            </div>
           </div>
         </section>
       </Element>
       <Element name='contact'>
         <section>
-          <h2>Contact me</h2>
-          <div className={css.contactInfo}>
+          <div className={css.fadeIn_view}>
+            <h2>Contact me</h2>
+          </div>
+          <div className={[css.contactInfo, css.fadeIn_view].join(' ')}>
             <Obfuscate tel="+61 426 404 077" />
             <Obfuscate
               email="hello@fernandagilbert.dev"
@@ -98,17 +120,28 @@ const Home = () => {
               }}
             />
           </div>
-          <Obfuscate href='https://github.com/ferwicker' target='_blank'>
+          <Obfuscate 
+            className={css.fadeIn_view} 
+            href='https://github.com/ferwicker' 
+            target='_blank'
+          >
             <button>
               Github
             </button>
           </Obfuscate>
-          <Obfuscate href='https://www.linkedin.com/in/ferwicker/' target='_blank'>
+          <Obfuscate 
+            className={css.fadeIn_view}
+            href='https://www.linkedin.com/in/ferwicker/'
+            target='_blank'
+          >
             <button>
               Linkedin
             </button>
           </Obfuscate>
-          <Obfuscate href='https://drive.google.com/file/d/1TDRrnPsQ-s3z6V6GieVFcF3UrWHUBf2Y/view?usp=sharing' target='_blank'>
+          <Obfuscate 
+            className={css.fadeIn_view} 
+            href='https://drive.google.com/file/d/1TDRrnPsQ-s3z6V6GieVFcF3UrWHUBf2Y/view?usp=sharing' target='_blank'
+          >
             <button>
               Resume
             </button>
